@@ -46,17 +46,49 @@
     <section class="testimonial-wrapper">
         <div class="testimonial-content">
             <div class="testimonial-text">
-                <p>"We're thrilled to have Twire, Sri Lanka, as one of our main development centers, and we're excited to see where it takes us. We believe in collaboration, diverse set of skills and backgrounds for innovative solutions thereof. Therefor, Twire with its Manager and team have the right mindset and expertise for us."</p>
+                <p id="testimonial-text">"We're thrilled to have Twire, Sri Lanka, as one of our main development centers, and we're excited to see where it takes us. We believe in collaboration, diverse set of skills and backgrounds for innovative solutions thereof. Therefore, Twire with its Manager and team have the right mindset and expertise for us."</p>
                 <div class="testimonial-author">
                     <span class="line"></span>
-                    <span class="name">jonas inghammar, effectsoft</span>
+                    <span id="testimonial-author" class="name">Jonas Inghammar, Effectsoft</span>
                 </div>
             </div>
             <div class="testimonial-image">
-                <img src="https://www.twire.se/wp-content/uploads/2019/06/jonas-2.jpg" alt="Jonas Inghammar">
+                <img id="testimonial-image" src="https://www.twire.se/wp-content/uploads/2019/06/jonas-2.jpg" alt="Jonas Inghammar">
             </div>
         </div>
     </section>
+    
+    <script>
+        const testimonials = [
+            {
+                text: `"We're thrilled to have Twire, Sri Lanka, as one of our main development centers, and we're excited to see where it takes us. We believe in collaboration, diverse set of skills and backgrounds for innovative solutions thereof. Therefore, Twire with its Manager and team have the right mindset and expertise for us."`,
+                author: "Jonas Inghammar, Effectsoft",
+                image: "https://www.twire.se/wp-content/uploads/2019/06/jonas-2.jpg"
+            },
+            {
+                text: `"Our goal at Minkalender has always been to make our products user friendly and efficient for our customers. One of the ways we're accomplishing this is through our business relationship with Twire."`,
+                author: "Fedric Johannesson",
+                image: "https://www.twire.se/wp-content/uploads/2019/06/MinKalenderLogo.png"
+            },
+            {
+                text: `"There are many companies out there working within the IT-industry, and then there is Twire, able to offer the support and reliability of a traditional consultancy firm with the low cost of an outsourcing company with the broadness and flexibility of a well-grounded business that also emphasise on integrity and data protection with right expertise. By far one of the best companies I have experienced."`,
+                author: "Sebastian Ethighar",
+                image: "https://www.twire.se/wp-content/uploads/2019/06/SlideCatcherLogo-1.png"
+            }
+        ];
+    
+        let index = 0;
+    
+        function changeTestimonial() {
+            index = (index + 1) % testimonials.length;
+            document.getElementById("testimonial-text").innerText = testimonials[index].text;
+            document.getElementById("testimonial-author").innerText = testimonials[index].author;
+            document.getElementById("testimonial-image").src = testimonials[index].image;
+        }
+    
+        setInterval(changeTestimonial, 5000); // Change testimonial every 5 seconds
+    </script>
+    
 
     <section class="brands-section">
         <h2 class="section-title">Some brands we worked with</h2>

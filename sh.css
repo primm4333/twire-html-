@@ -184,6 +184,7 @@ main {
     background: white;
     padding: 80px 0;
     margin-top: -50px;
+    height: 100vh;
 }
 
 
@@ -191,7 +192,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 64px;
     gap: 64px;
@@ -199,7 +200,7 @@ main {
 
 .testimonial-text {
     flex: 1;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.6;
     color: #333;
 }
@@ -229,7 +230,7 @@ main {
 }
 
 .testimonial-image img {
-    width: 100%;
+    width: 80%;
     height: auto;
     object-fit: cover;
 }
@@ -246,6 +247,7 @@ main {
     align-items: center;
     padding: 64px;
     z-index: 2;
+    margin-top: -250px;
 }
 
 .brands-grid {
@@ -394,3 +396,4 @@ footer {
     background-color: #fefefe;
     width: 80%;
 }
+
