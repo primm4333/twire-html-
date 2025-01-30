@@ -79,19 +79,20 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    gap: 0px;
     width: 60%;
+    margin-top: 40px;
 }
 
 .subtitle {
     color: #666;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: -60px;
 }
 
 .title {
-    font-size: 95px;
-    font-weight: bold;
+    font-size: 100px;
+    font-weight: bolder;
     line-height: 1.0;
 }
 
@@ -105,35 +106,63 @@ main {
     overflow: hidden;
 }
 
-.circle-left {
+.circle-left,
+.circle-right,
+.circle-right2 {
     position: absolute;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    animation: pulse 6s infinite alternate ease-in-out;
+}
+
+/* Left Circle */
+.circle-left {
     left: -50%;
     top: -30%;
     width: 60%;
     height: 65%;
-    border-radius: 50%;
-    background-color: #f0f8ff;
+    background-color: #bccad6;
+    animation-delay: 0s;
 }
 
+/* Right Circle */
 .circle-right {
-    position: absolute;
     right: -10%;
     top: 62%;
     width: 35%;
     height: 80%;
-    border-radius: 50%;
     background-color: #40c3e0;
+    animation-delay: 1s;
+    z-index: 2;
 }
+
+/* Second Right Circle */
 .circle-right2 {
-    position: absolute;
     right: -8%;
     top: 61%;
     width: 35%;
     height: 80%;
-    border-radius: 50%;
-    background-color: #f0f8ff;
-    z-index: -1;
+    background-color: #bccad6;
+    z-index: 1;
+    animation-delay: 2s;
 }
+
+/* Smooth Breathing Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
 
 .about-section {
     display: flex;
@@ -143,8 +172,8 @@ main {
     color: white;
     min-height: 60vh;
     width: 100%;
-    position: relative; /* Ensure it overlays the image */
-    background-color: rgba(50, 60, 75, 0.7); /* Dark color with 70% opacity */
+    position: relative; 
+    background-color: rgba(50, 60, 75, 0.7); 
     z-index: 2;
 }
 
@@ -170,7 +199,7 @@ main {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url('https://www.twire.se/wp-content/uploads/2019/06/Twire-38-of-141.jpg'); /* Your uploaded image */
+    background-image: url('https://www.twire.se/wp-content/uploads/2019/06/Twire-38-of-141.jpg'); 
     background-position: center;
     width: 100%;
     height: 100%;
