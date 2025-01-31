@@ -87,7 +87,6 @@ main {
     color: #666;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: -60px;
 }
 
 .title {
@@ -425,4 +424,167 @@ footer {
     background-color: #fefefe;
     width: 80%;
 }
+
+/* Existing Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    width: 100%;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.get-in-touch {
+    background-color: #40c3e0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+main {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.title {
+    font-size: 80px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.about-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial-wrapper {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brands-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background: #f0f5ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
